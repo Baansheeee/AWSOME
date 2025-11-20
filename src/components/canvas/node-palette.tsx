@@ -297,21 +297,24 @@ export function NodePalette({ collapsed = false }: NodePaletteProps) {
               key={resource.id}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onDragStart={(event) => onDragStart(event, resource)}
-              draggable
-              className="p-3 bg-gray-50 rounded-lg cursor-move hover:bg-gray-100 transition-colors border border-gray-200"
             >
-              <div className="flex items-center space-x-3">
-                <div className={`p-1 rounded ${getProviderColor(resource.provider)}`}>
-                  {resource.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 truncate">
-                    {resource.name}
-                  </p>
-                  <p className="text-xs text-gray-500 truncate">
-                    {resource.description}
-                  </p>
+              <div
+                onDragStart={(event) => onDragStart(event, resource)}
+                draggable
+                className="p-3 bg-gray-50 rounded-lg cursor-move hover:bg-gray-100 transition-colors border border-gray-200"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className={`p-1 rounded ${getProviderColor(resource.provider)}`}>
+                    {resource.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-gray-900 truncate">
+                      {resource.name}
+                    </p>
+                    <p className="text-xs text-gray-500 truncate">
+                      {resource.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
