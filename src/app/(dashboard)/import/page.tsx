@@ -5,7 +5,7 @@ import { DashboardLayout } from "@/components/layout/dashboard-layout"
 
 export default function ImportPage() {
   return (
-    <DashboardLayout title="" subtitle="Module description">
+    <DashboardLayout title="Import / Reverse-engineer" subtitle="Import existing cloud infrastructure">
       <div className="p-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
