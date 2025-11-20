@@ -1,14 +1,7 @@
-import { SignupForm } from "@/components/auth/signup-form"
 import Link from "next/link"
+import { AuthClient } from "./auth-client"
 
 export default function SignupPage() {
-  const handleSignup = async (data: any) => {
-    // TODO: Implement actual registration logic
-    console.log("Signup data:", data)
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-  }
-
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-blue-100 opacity-50"></div>
@@ -25,7 +18,7 @@ export default function SignupPage() {
           </Link>
         </div>
 
-        <SignupForm onSubmit={handleSignup} />
+        <AuthClient />
       </div>
     </div>
   )
