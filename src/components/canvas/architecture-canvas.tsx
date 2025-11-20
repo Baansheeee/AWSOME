@@ -10,12 +10,12 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
+  ConnectionMode,
+  Panel,
   type Node,
   type Edge,
   type Connection,
-  type NodeDragHandler,
-  type ConnectionMode,
-  Panel
+  type NodeDragHandler
 } from "reactflow"
 import "reactflow/dist/style.css"
 
